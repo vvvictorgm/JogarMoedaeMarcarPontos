@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363636"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/fundo2" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="411dp"
+        android:layout_height="729dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@color/BackgroundTon" />
+
+    <Button
+        android:id="@+id/dedo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/thumb"
+        android:elevation="200dp"
+        android:onClick="ativarKrark"
+        app:layout_constraintBottom_toTopOf="@+id/rolar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22000003"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/Moeda"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rolar"
+        app:srcCompat="@drawable/moeda1" />
+
+    <Button
+        android:id="@+id/rolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="jogarMoeda"
+        android:text="Jogar"
+        app:layout_constraintBottom_toTopOf="@+id/Moeda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dedo" />
+
+    <ImageView
+        android:id="@+id/moeda2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/Moeda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rolar"
+        app:srcCompat="@drawable/moeda1" />
+
+    <ImageView
+        android:id="@+id/moeda3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Moeda"
+        app:layout_constraintTop_toBottomOf="@+id/rolar"
+        app:srcCompat="@drawable/moeda1" />
+
+    <Button
+        android:id="@+id/manaVerde"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/forest"
+        android:longClickable="true"
+        android:onClick="subirManaVerde"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/manaVermelha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moeda2"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/manaVermelha"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/mountain"
+        android:longClickable="true"
+        android:onClick="subirManaVermelha"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Moeda"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/manaAzul"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/island"
+        android:longClickable="true"
+        android:onClick="subirManaAzul"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/manaVermelha"
+        app:layout_constraintTop_toBottomOf="@+id/moeda3"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@android:drawable/arrow_down_float"
+        android:onClick="descerManaVerde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manaVerde" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@android:drawable/arrow_down_float"
+        android:onClick="descerManaVermelha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manaVermelha" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@android:drawable/arrow_down_float"
+        android:onClick="descerManaAzul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/manaAzul" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="zerar"
+        android:text="Zerar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/textoFundo"
+        android:padding="10px"
+        android:text="Numero de Acertos"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moeda2"
+        app:layout_constraintEnd_toStartOf="@+id/dedo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/textoFundo"
+        android:padding="10px"
+        android:text="Numero de Erros"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moeda3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dedo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/acertos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:background="@color/textoFundo"
+        android:padding="10px"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moeda2"
+        app:layout_constraintEnd_toStartOf="@+id/dedo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/erros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:background="@color/textoFundo"
+        android:padding="10px"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/moeda3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dedo"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40"
+        android:textColor="@android:color/white"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/aumentarVida"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/diminuirVida"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/aumentarVida"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_seta_direita"
+        android:longClickable="true"
+        android:onClick="aumentarVida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vida"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/diminuirVida"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_seta_esquerda"
+        android:longClickable="true"
+        android:onClick="diminuirVida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vida"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_duplo_esquerdo"
+        android:longClickable="true"
+        android:onClick="diminuirVida2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diminuirVida"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_duplo_direito"
+        android:longClickable="true"
+        android:onClick="aumentarVida2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aumentarVida"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        app:layout_constraintBottom_toBottomOf="@+id/manaVerde"
+        app:layout_constraintEnd_toEndOf="@+id/manaVerde"
+        app:layout_constraintStart_toStartOf="@+id/manaVerde"
+        app:layout_constraintTop_toTopOf="@+id/manaVerde"
+        app:srcCompat="@color/textoFundo" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        app:layout_constraintBottom_toBottomOf="@+id/manaAzul"
+        app:layout_constraintEnd_toEndOf="@+id/manaAzul"
+        app:layout_constraintStart_toStartOf="@+id/manaAzul"
+        app:layout_constraintTop_toTopOf="@+id/manaAzul"
+        app:srcCompat="@color/textoFundo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        app:layout_constraintBottom_toBottomOf="@+id/manaVermelha"
+        app:layout_constraintEnd_toEndOf="@+id/manaVermelha"
+        app:layout_constraintStart_toStartOf="@+id/manaVermelha"
+        app:layout_constraintTop_toTopOf="@+id/manaVermelha"
+        app:srcCompat="@color/textoFundo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
