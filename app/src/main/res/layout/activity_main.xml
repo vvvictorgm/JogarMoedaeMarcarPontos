@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#363636"
-    tools:context=".MainActivity">
+    tools:context=".Activitys.MainActivity">
 
     <ImageView
         android:id="@+id/imageView12"
@@ -97,11 +97,11 @@
         android:layout_height="70dp"
         android:background="@drawable/forest"
         android:longClickable="true"
-        android:onClick="subirManaVerde"
+        android:onClick="manaAlterar"
         android:text="0"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintBottom_toTopOf="@+id/diminuirManaVerde"
         app:layout_constraintEnd_toStartOf="@+id/manaVermelha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moeda2"
@@ -114,11 +114,11 @@
         android:layout_height="70dp"
         android:background="@drawable/mountain"
         android:longClickable="true"
-        android:onClick="subirManaVermelha"
+        android:onClick="manaAlterar"
         android:text="0"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintBottom_toTopOf="@+id/diminuirManaVermelha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Moeda"
@@ -131,11 +131,11 @@
         android:layout_height="70dp"
         android:background="@drawable/island"
         android:longClickable="true"
-        android:onClick="subirManaAzul"
+        android:onClick="manaAlterar"
         android:text="0"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintBottom_toTopOf="@+id/diminuirManaAzul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/manaVermelha"
@@ -144,49 +144,49 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/diminuirManaVerde"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@android:drawable/arrow_down_float"
-        android:onClick="descerManaVerde"
+        android:onClick="manaAlterar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintEnd_toStartOf="@+id/diminuirManaVermelha"
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/manaVerde" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/diminuirManaVermelha"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@android:drawable/arrow_down_float"
-        android:onClick="descerManaVermelha"
+        android:onClick="manaAlterar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/manaVermelha" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/diminuirManaAzul"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@android:drawable/arrow_down_float"
-        android:onClick="descerManaAzul"
+        android:onClick="manaAlterar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.57"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/diminuirManaVermelha"
         app:layout_constraintTop_toBottomOf="@+id/manaAzul" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="zerar"
+        android:onClick="manaAlterar"
         android:text="Zerar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/diminuirManaVermelha" />
 
     <TextView
         android:id="@+id/textView"
@@ -268,9 +268,9 @@
         android:layout_height="40dp"
         android:background="@drawable/ic_seta_direita"
         android:longClickable="true"
-        android:onClick="aumentarVida"
+        android:onClick="vidaAlterada"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/AumentarVidaPlus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/vida"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -281,20 +281,20 @@
         android:layout_height="40dp"
         android:background="@drawable/ic_seta_esquerda"
         android:longClickable="true"
-        android:onClick="diminuirVida"
+        android:onClick="vidaAlterada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/vida"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintStart_toEndOf="@+id/DiminuirVidaplus"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/DiminuirVidaplus"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/ic_duplo_esquerdo"
         android:longClickable="true"
-        android:onClick="diminuirVida2"
+        android:onClick="vidaAlterada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/diminuirVida"
         app:layout_constraintHorizontal_bias="0.5"
@@ -302,12 +302,12 @@
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/AumentarVidaPlus"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/ic_duplo_direito"
         android:longClickable="true"
-        android:onClick="aumentarVida2"
+        android:onClick="vidaAlterada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView12"
         app:layout_constraintHorizontal_bias="0.5"
